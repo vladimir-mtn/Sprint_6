@@ -37,4 +37,7 @@ class BasePage:
         self.wait.until(EC.number_of_windows_to_be(2))
         self.driver.switch_to.window(self.driver.window_handles[-1])  # берём последнее окно
         return self
- 
+
+    def get_current_url(self):
+        return self.driver.current_url
+    

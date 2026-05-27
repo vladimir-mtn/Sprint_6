@@ -21,5 +21,5 @@ class TestMainPage:
         main_page.go_to_url(URL_ORDER_PAGE)
         main_page.click_scooter_logo()
     
-        assert main_page.driver.current_url == URL_MAIN_PAGE
+        assert main_page.get_current_url() == URL_MAIN_PAGE
         assert main_page.is_on_main_page()
